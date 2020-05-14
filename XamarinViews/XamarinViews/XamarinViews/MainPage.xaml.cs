@@ -16,6 +16,15 @@ namespace XamarinViews
         public MainPage()
         {
             InitializeComponent();
+            dtp.Date = DateTime.Now;
+            dtp.MinimumDate = new DateTime(1990,1,1);
+            dtp.MaximumDate = new DateTime(2020, 1, 1);
+            dtp.DateSelected += Dtp_DateSelected;
+        }
+
+        private void Dtp_DateSelected(object sender, DateChangedEventArgs e)
+        {
+            DisplayAlert("Fecha", e.NewDate.ToString(), "OKEY");
         }
 
         private void Button_Clicked(object sender, EventArgs e)

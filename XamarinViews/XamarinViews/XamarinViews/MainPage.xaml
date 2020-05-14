@@ -27,6 +27,10 @@
         <!--<Label Text="Welcome to Xamarin.Forms!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />-->
+
+        <DatePicker
+            x:Name="dtp"
+            Format="dddd/MM/yyyy"/>
     </StackLayout>
 
 
